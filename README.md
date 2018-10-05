@@ -16,7 +16,7 @@ Firstly download Visual Stuio 2017 from [Microsoft's official webpage](https://v
 During the installation, at least the `Universal Windows Platform development` and `.NET desktop development` shuld be chosen.</br>
 After the installation, it is also necessary to install another extension software [Microsoft Quantum Development Kit](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit). It can be finished by downloading the Q# VSIX file in the link, followed by double clicking.
 
-## 3 First code using C# -- Creating a Bell state
+## 3 First code using C# -- Create a Bell state
 ### 3.1 Create a new project
 Open the Visual Studio 2017, and then click  `File`-> `New`->`Project`. Then choose `Q# Application`, as is shown in the Pic 3.1 below.</br>
 </br>
@@ -54,7 +54,7 @@ namespace Quantum.Bell
 }
 ```
 
-### 3.2 
+### 3.2 The first programme in Q#
 By following the step 1 to step 4 in the [tutorial document](https://docs.microsoft.com/en-us/quantum/quantum-writeaquantumprogram?view=qsharp-preview&tabs=tabid-vs2017), you are able to add content into the `Bell.qs` and `Driver.cs`, which is like this:</br>
 **Code in `Bell.qs` is:**</br>
 ```C#
@@ -135,3 +135,5 @@ Init:Zero 0s=1000 1s=0
 Init:One  0s=0    1s=1000
 Press any key to continue...
 ```
+### 3.3 Create superposition
+In this part we need to make some change of the code in part 3.2.
