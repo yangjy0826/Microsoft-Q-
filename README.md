@@ -53,4 +53,33 @@ namespace Quantum.Bell
 }
 ```
 ### 3.2 
-By following the step 1 to step 4 in the [tutorial document](https://docs.microsoft.com/en-us/quantum/quantum-writeaquantumprogram?view=qsharp-preview&tabs=tabid-vs2017), you are able to get new 'Operation.qs' and 'Operation.qs'.
+By following the step 1 to step 4 in the [tutorial document](https://docs.microsoft.com/en-us/quantum/quantum-writeaquantumprogram?view=qsharp-preview&tabs=tabid-vs2017), you are able to get new 'Operation.qs' and 'Driver.cs', which is like this:</br>
+Code in 'Bell.qs' is:</br>
+```C#
+namespace Quantum.Bell 
+{
+    open Microsoft.Quantum.Primitive;    
+    open Microsoft.Quantum.Canon;
+    operation Operation () : ()    
+    {
+        body
+        {
+        }
+    }
+}
+```
+Code in 'Operation.qs' is:</br>
+using Microsoft.Quantum.Simulation.Core;
+using Microsoft.Quantum.Simulation.Simulators;
+```C#
+namespace Quantum.Bell
+{
+    class Driver
+    {
+        static void Main(string[] args)
+        {
+
+        }
+    }
+}
+```
