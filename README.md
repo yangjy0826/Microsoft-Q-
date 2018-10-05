@@ -7,7 +7,7 @@ I will start by introducing how to setup the environment of Q#, and then explain
 ## Contents
 * [1 Before installation](#1-before-installation)
 * [2 Installing Visual Studio and setting the environment](#2-installing-visual-studio-and-setting-the-environment)
-* [3 First code using C#](#first-code-using-c#)
+* [3 Create a Bell state](#create-a-bell-state)
     * 普通文本
     * 单行文本
     * 多行文本
@@ -29,8 +29,7 @@ Firstly download Visual Stuio 2017 from [Microsoft's official webpage](https://v
 During the installation, at least the `Universal Windows Platform development` and `.NET desktop development` shuld be chosen.</br>
 After the installation, it is also necessary to install another extension software [Microsoft Quantum Development Kit](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit). It can be finished by downloading the Q# VSIX file in the link, followed by double clicking.
 
-## 3 First code using C# 
-### -- Create a Bell state
+## 3 Create a Bell state
 ### 3.1 Create a new project
 Open the Visual Studio 2017, and then click  `File`-> `New`->`Project`. Then choose `Q# Application`, as is shown in the Pic 3.1 below.</br>
 </br>
@@ -154,6 +153,6 @@ Press any key to continue...
 The result shows that the observation is 100% the same with the initial value. If the initial state is `Zero`, we will observe `Zero` state all the time; while if the initial state is `One`, we will observe `One` all the time.
 
 ### 3.3 Create superposition -- Single quantum computing
-In this part we need to make some change of the code in part 3.2.
+In this part we need to make some change of the code in part [3.2](3.2-the-first-programme-in-Q#).
 
 ### 3.4 Create entanglement -- Multiple quantum computing
