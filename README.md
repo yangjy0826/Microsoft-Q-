@@ -14,6 +14,7 @@ I will start by introducing how to setup the environment of Q#, and then explain
         * 3.3.1 Pauli-X Gate
         * 3.3.2 Hadamard Gate
     * 3.4 Create entanglement -- Multiple quantum computing
+        * Controlled-NOT Gate
 
 ## 1 Before installation
 Q# can work on different operating systems including Windows, Linux and Mac, but make sure that it is 64-bit and has [.NET Core SDK 2.0](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) or higher version installed.</br>
@@ -182,6 +183,7 @@ Now if the initial state is `Zero`, we have 50% probability to observe `Zero` an
 </br>
 ![Pic 3.3](https://github.com/yangjy0826/Microsoft-Q-/blob/master/img/Hadamard.gif)
 ### 3.4 Create entanglement -- Multiple quantum computing
+#### Controlled-NOT Gate
 In previous part 3.3, we only deal with one single qubit, but in this part we will try to involve two qubits and create entanglement between them by following the step 6 in the [tutorial document](https://docs.microsoft.com/en-us/quantum/quantum-writeaquantumprogram?view=qsharp-preview&tabs=tabid-vs2017).</br>
 In order to create entanglement, we need to make three changes in the operation `BellTest`.
 We should first allocate two qubits instead of one:
