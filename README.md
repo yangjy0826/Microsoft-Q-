@@ -66,12 +66,12 @@ namespace Quantum.Bell
 ### 3.2 The first programme in Q#
 By following the step 1 to step 4 in the [tutorial document](https://docs.microsoft.com/en-us/quantum/quantum-writeaquantumprogram?view=qsharp-preview&tabs=tabid-vs2017), you are able to add content into the `Bell.qs` and `Driver.cs`, which is like this:</br>
 **Code in `Bell.qs` is:**</br>
-```diff
+```C#
 namespace Quantum.Bell
 {
     open Microsoft.Quantum.Primitive;
     open Microsoft.Quantum.Canon;
-+ operation Set (desired: Result, q1: Qubit) : ()
+    operation Set (desired: Result, q1: Qubit) : ()
     {
         body
         {
