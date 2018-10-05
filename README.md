@@ -5,8 +5,8 @@ Q# is the language developed by Microsoft, which can be used on many quantum alg
 I will start by introducing how to setup the environment of Q#, and then explain the process of writing a first code in Q#.
 
 ## Contents
-* [1 Before installation](#1 Before installation)
-* [2 Installing Visual Studio and Setting the environment](#标题)
+* [1 Before installation](#1-before-installation)
+* [2 Installing Visual Studio and setting the environment](#2-installing-visual-studio-and-setting-the-environment)
 * [3 First code using C# -- Create a Bell state](#文本)
     * 普通文本
     * 单行文本
@@ -24,7 +24,7 @@ After installing and opening CPU-Z, you can check by whether there is  `AUX` und
 </br>
 ![Pic 1](https://github.com/yangjy0826/Microsoft-Q-/blob/master/img/CPU.PNG)
 
-## 2 Installing Visual Studio and Setting the environment
+## 2 Installing Visual Studio and setting the environment
 Firstly download Visual Stuio 2017 from [Microsoft's official webpage](https://visualstudio.microsoft.com/downloads/), and make sure that it is the right version (2017).</br>
 During the installation, at least the `Universal Windows Platform development` and `.NET desktop development` shuld be chosen.</br>
 After the installation, it is also necessary to install another extension software [Microsoft Quantum Development Kit](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit). It can be finished by downloading the Q# VSIX file in the link, followed by double clicking.
