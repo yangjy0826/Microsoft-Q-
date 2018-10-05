@@ -1,8 +1,21 @@
 # Quantum Computing Programming with Microsoft Q#
-*last updated: 2018-10-05*
+*Last updated: 2018-10-05*
 ***
 Q# is the language developed by Microsoft, which can be used on many quantum algorithms. It should be driven by C#, and works on Visual Studio 2017. This project is based on the [Q# tutorial document](https://docs.microsoft.com/en-us/quantum/quantum-writeaquantumprogram?view=qsharp-preview&tabs=tabid-vs2017) given by Microsoft. I met some problems running the project, even though most of the work was only copy-paste. What is more, I would like to include some knowledge on quantum computing during the process. These are the main purposes of this md file.</br>
-I will start by introducing how to setup the environment of Q#.
+I will start by introducing how to setup the environment of Q#, and then explain the process of writing a first code in Q#.
+
+## Contents
+* [1 Before installation](#1 Before installation)
+* [2 Installing Visual Studio and Setting the environment](#标题)
+* [3 First code using C# -- Create a Bell state](#文本)
+    * 普通文本
+    * 单行文本
+    * 多行文本
+    * 文字高亮
+    * 换行
+    * 斜体
+    * 粗体
+    * 删除线
 
 ## 1 Before installation
 Q# can work on different operating systems including Windows, Linux and Mac, but make sure that it is 64-bit and has [.NET Core SDK 2.0](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) or higher version installed.</br>
@@ -138,6 +151,8 @@ Init:One  0s=0    1s=1000
 Press any key to continue...
 ```
 The result shows that the observation is 100% the same with the initial value. If the initial state is `Zero`, we will observe `Zero` state all the time; while if the initial state is `One`, we will observe `One` all the time.
+
 ### 3.3 Create superposition -- Single quantum computing
 In this part we need to make some change of the code in part 3.2.
+
 ### 3.4 Create entanglement -- Multiple quantum computing
