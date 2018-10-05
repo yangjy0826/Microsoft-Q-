@@ -136,4 +136,4 @@ Init:One  0s=0    1s=1000
 Press any key to continue...
 ```
 ### 3.3 Create superposition
-In this part we need to make some change of the code in [part 3.2](#3 First code using C# -- Create a Bell state).
+In this part we need to make some change of the code in [part 3.2](#3.2).
