@@ -18,5 +18,6 @@ After the installation, it is also necessary to install another extension softwa
 
 ## 3 First code using C# -- Creating a Bell state
 ### 3.1 Create a new project
-Open the Visual Studio 2017, and then click 'File'->'New'->'Project'. Then choose 'Q# Application' as is shown in the Pic 3.1 below.
-![Pic 3.1]https://github.com/yangjy0826/Microsoft-Q-/blob/master/img/new_project.PNG
+Open the Visual Studio 2017, and then click 'File'->'New'->'Project'. Then choose 'Q# Application' as is shown in the Pic 3.1 below.</br>
+</br>
+![Pic 3.1](https://github.com/yangjy0826/Microsoft-Q-/blob/master/img/new_project.PNG)
