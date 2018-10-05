@@ -22,7 +22,7 @@ Open the Visual Studio 2017, and then click 'File'->'New'->'Project'. Then choos
 </br>
 ![Pic 3.1](https://github.com/yangjy0826/Microsoft-Q-/blob/master/img/new_project.PNG)</br>
 Then you can find that Visual Studio automatically generate two files, one is 'Operation.qs', which is a Q# file, the other is 'Operation.qs', which is a C# file. We should first rename the Q# file into 'Bell.qs'. </br>
-Right now, the code in 'Bell.qs' and 'Operation.qs' is automatically generated when creating the new project, which is like this:</br>
+Right now, the code in 'Bell.qs' and 'Driver.cs' is automatically generated when creating the new project, which is like this:</br>
 Code in 'Bell.qs' is:</br>
 ```C#
 namespace Quantum.Bell 
@@ -37,10 +37,11 @@ namespace Quantum.Bell
     }
 }
 ```
-Code in 'Operation.qs' is:</br>
+Code in 'Driver.cs' is:</br>
+```C#
 using Microsoft.Quantum.Simulation.Core;
 using Microsoft.Quantum.Simulation.Simulators;
-```C#
+
 namespace Quantum.Bell
 {
     class Driver
@@ -56,29 +57,72 @@ namespace Quantum.Bell
 By following the step 1 to step 4 in the [tutorial document](https://docs.microsoft.com/en-us/quantum/quantum-writeaquantumprogram?view=qsharp-preview&tabs=tabid-vs2017), you are able to get new 'Operation.qs' and 'Driver.cs', which is like this:</br>
 Code in 'Bell.qs' is:</br>
 ```C#
-namespace Quantum.Bell 
+namespace Quantum.Bell
 {
-    open Microsoft.Quantum.Primitive;    
+    open Microsoft.Quantum.Primitive;
     open Microsoft.Quantum.Canon;
-    operation Operation () : ()    
+
+    operation Set (desired: Result, q1: Qubit) : ()
     {
         body
         {
+            let current = M(q1);            // The 'let' keyword binds mutable variables
+            if (desired != current)
+            {
+              X(q1); // NOT gate
+            }
+        }
+    }
+
+    operation BellTest (count : Int, initial : Result) : (Int, Int) 
+    {
+        body
+        {
+          mutable numOnes = 0;
+      using (qubits = Qubit[1])
+      {
+          for (test in 1..count)
+          {
+              Set (initial, qubits[0]);
+              let res = M (qubits[0]);
+              // Count the number of ones we saw:
+              if (res == One)
+              {
+                  set numOnes = numOnes + 1;
+              }
+          }
+          Set(Zero, qubits[0]);
+      }
+      // Return number of times we saw a |0> and number of times we saw a |1>
+      return (count-numOnes, numOnes);
         }
     }
 }
+
 ```
-Code in 'Operation.qs' is:</br>
+Code in 'Driver.qs' is:</br>
+```C#
 using Microsoft.Quantum.Simulation.Core;
 using Microsoft.Quantum.Simulation.Simulators;
-```C#
 namespace Quantum.Bell
 {
     class Driver
     {
         static void Main(string[] args)
         {
-
+            using (var sim = new QuantumSimulator()) // sim is the Q# quantum similator
+            {
+                // Try initial values
+                Result[] initials = new Result[] { Result.Zero, Result.One };
+                foreach (Result initial in initials)
+                {
+                    var res = BellTest.Run(sim, 1000, initial).Result;  // Run is the method to run the quantum simulation
+                    var (numZeros, numOnes) = res;
+                    System.Console.WriteLine($"Init:{initial,-4} 0s={numZeros,-4} 1s={numOnes,-4}");
+                }
+            }
+            System.Console.WriteLine("Press any key to continue...");
+            System.Console.ReadKey();
         }
     }
 }
