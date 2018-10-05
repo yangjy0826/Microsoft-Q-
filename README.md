@@ -158,12 +158,23 @@ If we add an Pauli-X Gate (X Gate) in the operation `BellTest`:
 + X(qubits[0]);
 let res = M (qubits[0]);
 ```
-We can get a result totally in contrast with that in part 3.2, which is like:
+We can get a result  which is totally in contrast with that in part 3.2:
 ```
 Init:Zero 0s=0    1s=1000
 Init:One  0s=1000 1s=0
 ```
-That is because
+Now if the initial state is `Zero`, we will observe `One` state all the time; while if the initial state is `One`, we will observe `Zero` all the time.That is because X gate is similar to the logical NOT in classical computing. It can map `Zero` to `One`, and `One` to `Zero`.
 #### 3.3.2 Hadamard Gate
-
+If we delete the X Gate, and add a Hadamard Gate (H Gate) in the same position:
+```diff
+- X(qubits[0]);
++ H(qubits[0]);
+let res = M (qubits[0]);
+```
+The result becomes:
+```
+Init:Zero 0s=484  1s=516
+Init:One  0s=522  1s=478
+```
+Now if the initial state is `Zero`, we have 50% probability to observe `Zero` and 50% probability to observe `One`, and vice versa. This is because the H Gate is used to create superposition, 
 ### 3.4 Create entanglement -- Multiple quantum computing
