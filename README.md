@@ -7,7 +7,7 @@ I will start by introducing how to setup the environment of Q#, and then explain
 ## Contents
 * [1 Before installation](#1-before-installation)
 * [2 Installing Visual Studio and setting the environment](#2-installing-visual-studio-and-setting-the-environment)
-* [3 First code using C# -- Create a Bell state](#first-code-using-c#----create-a-bell-state)
+* [3 First code using C#](#first-code-using-c#)
     * 普通文本
     * 单行文本
     * 多行文本
@@ -29,7 +29,8 @@ Firstly download Visual Stuio 2017 from [Microsoft's official webpage](https://v
 During the installation, at least the `Universal Windows Platform development` and `.NET desktop development` shuld be chosen.</br>
 After the installation, it is also necessary to install another extension software [Microsoft Quantum Development Kit](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit). It can be finished by downloading the Q# VSIX file in the link, followed by double clicking.
 
-## 3 First code using C# -- Create a Bell state
+## 3 First code using C# 
+### -- Create a Bell state
 ### 3.1 Create a new project
 Open the Visual Studio 2017, and then click  `File`-> `New`->`Project`. Then choose `Q# Application`, as is shown in the Pic 3.1 below.</br>
 </br>
