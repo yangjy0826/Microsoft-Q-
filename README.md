@@ -1,4 +1,4 @@
-# Quantum Computing Programming with Microsoft Q#
+ # Quantum Computing Programming with Microsoft Q#
 *Last updated: 2018-10-05*
 ***
 Q# is the language developed by Microsoft, which can be used on many quantum algorithms. It should be driven by C#, and works on Visual Studio 2017. This project is based on the [Q# tutorial document](https://docs.microsoft.com/en-us/quantum/quantum-writeaquantumprogram?view=qsharp-preview&tabs=tabid-vs2017) given by Microsoft. I met some problems running the project, even though most of the work was only copy-paste. What is more, I would like to include some knowledge on quantum computing during the process. These are the main purposes of this md file.</br>
@@ -23,9 +23,10 @@ After installing and opening CPU-Z, you can check by whether there is  `AUX` und
 ## 2 Installing Visual Studio and setting the environment
 Firstly download Visual Stuio 2017 from [Microsoft's official webpage](https://visualstudio.microsoft.com/downloads/), and make sure that it is the right version (2017).</br>
 During the installation, at least the `Universal Windows Platform development` and `.NET desktop development` shuld be chosen.</br>
-After the installation, it is also necessary to install another extension software [Microsoft Quantum Development Kit](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit). It can be finished by downloading the Q# VSIX file in the link, followed by double clicking.
+After the installation of Visual Studio, it is also necessary to install another extension software [Microsoft Quantum Development Kit](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit). It can be finished by downloading the Q# VSIX file in the link, followed by double clicking.
 
 ## 3 Create a Bell state
+Bell state specifies the quantum states of two qubits that represent the simplest examples of quantum entanglement. It can be realized by using Hadamard gate and CNOT gate, which will be introduced later.
 ### 3.1 Create a new project
 Open the Visual Studio 2017, and then click  `File`-> `New`->`Project`. Then choose `Q# Application`, as is shown in the Pic 3.1 below.</br>
 </br>
