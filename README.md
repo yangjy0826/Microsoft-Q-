@@ -203,7 +203,7 @@ Set(Zero, qubits[0]);
 + Set(Zero, qubits[1]);
 ```
 After the changes, we can find that the result is still the same with that in part 3.3. This is because the probability (50-50) of observation does not change. What we need is to show how the second qubit reacts to the first being measured. Thus another statistic and a new return value `agree` should be added:</br>
-*The final version of `Bell.qs`:*</br>
+**The final version of `Bell.qs`:**</br>
 ```C#
 namespace Quantum.Bell
 {
@@ -257,7 +257,7 @@ namespace Quantum.Bell
     }
 }
 ```
-*The final version of `Driver.cs`:*</br>
+**The final version of `Driver.cs`:**</br>
 ```C#
 using Microsoft.Quantum.Simulation.Core;
 using Microsoft.Quantum.Simulation.Simulators;
