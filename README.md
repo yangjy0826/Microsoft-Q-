@@ -7,7 +7,7 @@ I will start by introducing how to setup the environment of Q#, and then explain
 ## Contents
 * [1 Before installation](#1-before-installation)
 * [2 Installing Visual Studio and setting the environment](#2-installing-visual-studio-and-setting-the-environment)
-* [3 First code using C# -- Create a Bell state](#文本)
+* [3 First code using C# -- Create a Bell state](#first-code-using-c#----create-a-bell-state)
     * 普通文本
     * 单行文本
     * 多行文本
