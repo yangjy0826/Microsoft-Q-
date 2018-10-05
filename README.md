@@ -129,3 +129,9 @@ namespace Quantum.Bell
     }
 }
 ```
+Press `Debug`->`Start debugging`(F5) or `start without debugging`(Ctrl+F5), the code above will be built and executed, and the result is:</br>
+```
+Init:Zero 0s=1000 1s=0
+Init:One  0s=0    1s=1000
+Press any key to continue...
+```
