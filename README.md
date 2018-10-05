@@ -91,11 +91,11 @@ namespace Quantum.Bell
         body
         {
           mutable numOnes = 0;
-      using (qubits = Qubit[1])  // Allocate one qubit
+      using (qubits = Qubit[1])  // Set the number of Qubits to 1
       {
           for (test in 1..count)
           {
-              Set (initial, qubits[0]);
+              Set (initial, qubits[0]);  // Initialize qubit 1 to make it always Zero when we start
               let res = M (qubits[0]);  // M() is used to measure the qubit 
               // Count the number of ones we saw:
               if (res == One)
@@ -103,7 +103,7 @@ namespace Quantum.Bell
                   set numOnes = numOnes + 1;
               }
           }
-          Set(Zero, qubits[0]);
+          Set(Zero, qubits[0]);  // Reset the qubit before releasing it
       }
       // Return number of times we saw a |0> and number of times we saw a |1>
       return (count-numOnes, numOnes);
@@ -182,15 +182,112 @@ Now if the initial state is `Zero`, we have 50% probability to observe `Zero` an
 </br>
 ![Pic 3.3](https://github.com/yangjy0826/Microsoft-Q-/blob/master/img/Hadamard.gif)
 ### 3.4 Create entanglement -- Multiple quantum computing
-In previous part 3.3, we only deal with one single qubit, but in this part we will try to involve two qubits and create entanglement between them.</br>
+In previous part 3.3, we only deal with one single qubit, but in this part we will try to involve two qubits and create entanglement between them by following the step 6 in the [tutorial document](https://docs.microsoft.com/en-us/quantum/quantum-writeaquantumprogram?view=qsharp-preview&tabs=tabid-vs2017).</br>
+In order to create entanglement, we need to make three changes in the operation `BellTest`.
 We should first allocate two qubits instead of one:
 ```diff
-- using (qubits = Qubit[1])  // Allocate one qubit
-+ using (qubits = Qubit[2])  // Allocate two qubits
+- using (qubits = Qubit[1])  // Set the number of Qubits to 1
++ using (qubits = Qubit[2])  // Set the number of Qubits to 2
 ```
-Then we need to add a new gate in the operation `BellTest`:
+Then we need to add a new gate Controlled-NOT Gate (CNOT Gate):
 ```diff
 H(qubits[0]);
 + CNOT(qubits[0],qubits[1]);
 let res = M (qubits[0]);
 ```
+We also need to add reset the second qubit, just as what we did previously to the first qubit:
+```diff
+Set(Zero, qubits[0]);
++ Set(Zero, qubits[1]);
+```
+After the changes, we can find that the result is still the same with that in part 3.3. This is because the probability (50-50) of observation does not change. What we need is to show how the second qubit reacts to the first being measured. Thus another statistic and a new return value `agree` should be added:</br>
+*The final version of `Bell.qs`:*</br>
+```
+namespace Quantum.Bell
+{
+    open Microsoft.Quantum.Primitive;
+    open Microsoft.Quantum.Canon;
+
+    operation Set (desired: Result, q1: Qubit) : ()
+    {
+        body
+        {
+			let current = M(q1);
+
+            if (desired != current)
+            {
+                X(q1);
+            }
+        }
+    }
+	operation BellTest (count : Int, initial: Result) : (Int,Int,Int)  // Add a new statistic
+    {
+        body
+        {
+            mutable numOnes = 0;
+			mutable agree = 0;
+            using (qubits = Qubit[2]) 
+            {
+                for (test in 1..count)
+                {
+                    Set (initial, qubits[0]);
+					Set (Zero, qubits[1]);  
+
+					H(qubits[0]);  // Hadamard gate (used to create super position)
+					CNOT(qubits[0],qubits[1]);
+                    let res = M (qubits[0]);
+
+					if (M (qubits[1]) == res) 
+                    {
+                        set agree = agree + 1;
+                    }
+
+                    if (res == One)
+                    {
+                        set numOnes = numOnes + 1;
+                    }
+                }
+                Set(Zero, qubits[0]);
+				Set(Zero, qubits[1]);
+            }
+            return (count-numOnes, numOnes, agree);
+        }
+    }
+}
+```
+*The final version of `Driver.cs`:*</br>
+```
+using Microsoft.Quantum.Simulation.Core;
+using Microsoft.Quantum.Simulation.Simulators;
+
+namespace Quantum.Bell
+{
+    class Driver
+    {
+        static void Main(string[] args)
+        {
+            using (var sim = new QuantumSimulator())
+            {
+                // Try initial values
+                Result[] initials = new Result[] { Result.Zero, Result.One };
+                foreach (Result initial in initials)
+                {
+                    var res = BellTest.Run(sim, 1000, initial).Result;
+                    var (numZeros, numOnes, agree) = res;
+                    System.Console.WriteLine(
+                        $"Init:{initial,-4} 0s={numZeros,-4} 1s={numOnes,-4} agree={agree,-4}");  // Add a new return value 'agree'
+                }
+            }
+            System.Console.WriteLine("Press any key to continue...");
+            System.Console.ReadKey();
+        }
+    }
+}
+```
+The final result is:
+```
+Init:Zero 0s=515  1s=485  agree=1000
+Init:One  0s=490  1s=510  agree=1000
+Press any key to continue...
+```
+That is because the Controlled-NOT gate can entangle the two qubits, so whatever happens to one bit, happens to the other. CNOT works by flipping the second qubit (the target qubit) if and only if the first qubit (the control qubit) is state `One`.
