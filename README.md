@@ -139,7 +139,7 @@ namespace Quantum.Bell
 }
 ```
 Press `Debug`->`Start debugging`(F5) or `start without debugging`(Ctrl+F5), the code above will be built and executed. </br>
-Sometimes there may be an error saying `the name XX does not exist in the current context unity`, which means that there is something wrong with the `References` of this project. The fastest solution is to download [this repository](https://github.com/yangjy0826/Microsoft-Q-) and make change in the `Bell.qs` and `Driver.cs` file.
+Sometimes there may be an error saying `the name XX does not exist in the current context unity`, which means that there is something wrong with the `References` of this project. The fastest solution to this error is by downloading [this repository](https://github.com/yangjy0826/Microsoft-Q-) and making changes in the dowloaded `Bell.qs` and `Driver.cs` files.
 The correct result for this part is:</br>
 ```
 Init:Zero 0s=1000 1s=0
