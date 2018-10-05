@@ -7,7 +7,7 @@ I will start by introducing how to setup the environment of Q#.
 ## 1 Before installation
 Q# can work on different operating systems including Windows, Linux and Mac, but make sure that it is 64-bit and has [.NET Core SDK 2.0](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) or higher version installed.</br>
 The simulator of Q# uses the instruction set of AUX, so if your CPU does not support AUX, the calculation speed will be not good enough. By using the sofware [CPU-Z](https://www.cpuid.com/softwares/cpu-z-android.html), you are able to figure out if your CPU sipport AUX.
-After installing and opening CPU-Z, you can check by whether there is 'AUX' under 'Instructions', which is shown in Pic 1 below.</br>
+After installing and opening CPU-Z, you can check by whether there is  `AUX` under `Instructions`, which is shown in Pic 1 below.</br>
 </br>
 ![Pic 1](https://github.com/yangjy0826/Microsoft-Q-/blob/master/img/CPU.PNG)
 
@@ -53,6 +53,7 @@ namespace Quantum.Bell
     }
 }
 ```
+
 ### 3.2 
 By following the step 1 to step 4 in the [tutorial document](https://docs.microsoft.com/en-us/quantum/quantum-writeaquantumprogram?view=qsharp-preview&tabs=tabid-vs2017), you are able to get new 'Operation.qs' and 'Driver.cs', which is like this:</br>
 Code in 'Bell.qs' is:</br>
@@ -100,6 +101,7 @@ namespace Quantum.Bell
 }
 
 ```
+Above we add two 'operation' into the 'Bell.qs'. 'operation' is the basic execution unit in Q#, just like the function in C, C++ and Java. </br>
 Code in 'Driver.qs' is:</br>
 ```C#
 using Microsoft.Quantum.Simulation.Core;
