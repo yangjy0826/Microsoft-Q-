@@ -178,5 +178,5 @@ Init:One  0s=522  1s=478
 ```
 Now if the initial state is `Zero`, we have 50% probability to observe `Zero` and 50% probability to observe `One`, and vice versa. This is because the H Gate is used to create superposition, for it can map the basis qubit states `Zero` and `One` into two superposition states:</br>
 </br>
-![Pic 3.2](https://github.com/yangjy0826/Microsoft-Q-/blob/master/img/Hadamard.jpg)
+![Pic 3.2](https://github.com/yangjy0826/Microsoft-Q-/blob/master/img/Hadamard.gif)
 ### 3.4 Create entanglement -- Multiple quantum computing
