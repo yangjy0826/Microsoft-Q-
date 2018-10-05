@@ -99,7 +99,7 @@ namespace Quantum.Bell
               let res = M (qubits[0]);
               // Count the number of ones we saw:
               if (res == One)
-              {
+{
                   set numOnes = numOnes + 1;
               }
           }
@@ -153,6 +153,17 @@ The result shows that the observation is 100% the same with the initial value. I
 ### 3.3 Create superposition -- Single quantum computing
 In this part, by following the step 5 in the [tutorial document](https://docs.microsoft.com/en-us/quantum/quantum-writeaquantumprogram?view=qsharp-preview&tabs=tabid-vs2017), we can make some changes of the code in part 3.2 to create superposition for a qubit.</br>
 #### 3.3.1 Pauli-X Gate
+If we add an Pauli-X Gate (X Gate) in the operation `BellTest`:
+```diff
++ X(qubits[0]);
+let res = M (qubits[0]);
+```
+We can get a result totally in contrast with that in part 3.2, which is like:
+```
+Init:Zero 0s=0    1s=1000
+Init:One  0s=1000 1s=0
+```
+That is because
 #### 3.3.2 Hadamard Gate
 
 ### 3.4 Create entanglement -- Multiple quantum computing
