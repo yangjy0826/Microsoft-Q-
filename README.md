@@ -9,7 +9,7 @@ Q# can work on different operating systems including Windows, Linux and Mac, but
 The simulator of Q# uses the instruction set of AUX, so if your CPU does not support AUX, the calculation speed will be not good enough. By using the sofware [CPU-Z](https://www.cpuid.com/softwares/cpu-z-android.html), you are able to figure out if your CPU sipport AUX.
 After installing and opening CPU-Z, you can check by whether there is 'AUX' under 'Instructions', which is shown in Pic 1 below.</br>
 </br>
-![image](https://github.com/yangjy0826/Microsoft-Q-/blob/master/img/CPU.PNG)
+![Pic 1](https://github.com/yangjy0826/Microsoft-Q-/blob/master/img/CPU.PNG)
 
 ## 2 Installing Visual Studio and Setting the environment
 Firstly download Visual Stuio 2017 from [Microsoft's official webpage](https://visualstudio.microsoft.com/downloads/), and make sure that it is the right version (2017).</br>
@@ -18,4 +18,5 @@ After the installation, it is also necessary to install another extension softwa
 
 ## 3 First code using C# -- Creating a Bell state
 ### 3.1 Create a new project
-Open the Visual Studio 2017, and then click 'File'->'New'->'Project'.
+Open the Visual Studio 2017, and then click 'File'->'New'->'Project'. Then choose 'Q# Application' as is shown in the Pic 3.1 below.
+![Pic 3.1]https://github.com/yangjy0826/Microsoft-Q-/blob/master/img/new_project.PNG
