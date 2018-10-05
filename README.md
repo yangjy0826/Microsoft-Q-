@@ -23,7 +23,7 @@ Open the Visual Studio 2017, and then click 'File'->'New'->'Project'. Then choos
 ![Pic 3.1](https://github.com/yangjy0826/Microsoft-Q-/blob/master/img/new_project.PNG)</br>
 Then you can find that Visual Studio automatically generate two files, one is 'Operation.qs', which is a Q# file, the other is 'Operation.qs', which is a C# file. We should first rename the Q# file into 'Bell.qs'. </br>
 Right now, the code in 'Bell.qs' and 'Operation.qs' is automatically generated when creating the new project, which is like this:</br>
-'Bell.qs':</br>
+Code in 'Bell.qs' is:</br>
 ```C#
 namespace Quantum.Bell 
 {
@@ -37,4 +37,4 @@ namespace Quantum.Bell
     }
 }
 ```
-'Operation.qs':</br>
+Code in 'Operation.qs' is:</br>
