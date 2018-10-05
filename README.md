@@ -13,17 +13,17 @@ After installing and opening CPU-Z, you can check by whether there is  `AUX` und
 
 ## 2 Installing Visual Studio and Setting the environment
 Firstly download Visual Stuio 2017 from [Microsoft's official webpage](https://visualstudio.microsoft.com/downloads/), and make sure that it is the right version (2017).</br>
-During the installation, at least the 'Universal Windows Platform development' and 'NET desktop development' shuld be chosen.</br>
+During the installation, at least the `Universal Windows Platform development` and `.NET desktop development` shuld be chosen.</br>
 After the installation, it is also necessary to install another extension software [Microsoft Quantum Development Kit](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit). It can be finished by downloading the Q# VSIX file in the link, followed by double clicking.
 
 ## 3 First code using C# -- Creating a Bell state
 ### 3.1 Create a new project
-Open the Visual Studio 2017, and then click 'File'->'New'->'Project'. Then choose 'Q# Application' as is shown in the Pic 3.1 below.</br>
+Open the Visual Studio 2017, and then click  `File`-> `New`->`Project`. Then choose `Q# Application`, as is shown in the Pic 3.1 below.</br>
 </br>
 ![Pic 3.1](https://github.com/yangjy0826/Microsoft-Q-/blob/master/img/new_project.PNG)</br>
-Then you can find that Visual Studio automatically generate two files, one is 'Operation.qs', which is a Q# file, the other is 'Operation.qs', which is a C# file. We should first rename the Q# file into 'Bell.qs'. </br>
-Right now, the code in 'Bell.qs' and 'Driver.cs' is automatically generated when creating the new project, which is like this:</br>
-Code in 'Bell.qs' is:</br>
+Then you can find that Visual Studio automatically generate two files, one is `Operation.qs`, which is a Q# file, the other is `Driver.cs`, which is a C# file. We should first rename the Q# file into `Bell.qs`. </br>
+Right now, the code in `Bell.qs` and `Driver.cs` is automatically generated when creating the new project, which is like this:</br>
+Code in `Bell.qs` is:</br>
 ```C#
 namespace Quantum.Bell 
 {
@@ -37,7 +37,7 @@ namespace Quantum.Bell
     }
 }
 ```
-Code in 'Driver.cs' is:</br>
+Code in `Driver.cs` is:</br>
 ```C#
 using Microsoft.Quantum.Simulation.Core;
 using Microsoft.Quantum.Simulation.Simulators;
@@ -55,8 +55,8 @@ namespace Quantum.Bell
 ```
 
 ### 3.2 
-By following the step 1 to step 4 in the [tutorial document](https://docs.microsoft.com/en-us/quantum/quantum-writeaquantumprogram?view=qsharp-preview&tabs=tabid-vs2017), you are able to get new 'Operation.qs' and 'Driver.cs', which is like this:</br>
-Code in 'Bell.qs' is:</br>
+By following the step 1 to step 4 in the [tutorial document](https://docs.microsoft.com/en-us/quantum/quantum-writeaquantumprogram?view=qsharp-preview&tabs=tabid-vs2017), you are able to add content into the `Bell.qs` and `Driver.cs`, which is like this:</br>
+Code in `Bell.qs` is:</br>
 ```C#
 namespace Quantum.Bell
 {
@@ -101,8 +101,8 @@ namespace Quantum.Bell
 }
 
 ```
-Above we add two 'operation' into the 'Bell.qs'. 'operation' is the basic execution unit in Q#, just like the function in C, C++ and Java. </br>
-Code in 'Driver.qs' is:</br>
+Above we add two `operation` into the `Bell.qs`. `operation` is the basic execution unit in Q#, just like the `function` in C, C++ and Java. </br>
+Code in `Driver.qs` is:</br>
 ```C#
 using Microsoft.Quantum.Simulation.Core;
 using Microsoft.Quantum.Simulation.Simulators;
