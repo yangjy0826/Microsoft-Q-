@@ -11,6 +11,8 @@ I will start by introducing how to setup the environment of Q#, and then explain
     * 3.1 Create a new project
     * 3.2 The first programme in Q#
     * 3.3 Create superposition -- Single quantum computing
+        * 3.3.1 Pauli-X Gate
+        * 3.3.2 Hadamard Gate
     * 3.4 Create entanglement -- Multiple quantum computing
 
 ## 1 Before installation
@@ -149,6 +151,8 @@ Press any key to continue...
 The result shows that the observation is 100% the same with the initial value. If the initial state is `Zero`, we will observe `Zero` state all the time; while if the initial state is `One`, we will observe `One` all the time.
 
 ### 3.3 Create superposition -- Single quantum computing
-In this part we need to make some change of the code in part 3.2.
+In this part, by following the step 5 in the [tutorial document](https://docs.microsoft.com/en-us/quantum/quantum-writeaquantumprogram?view=qsharp-preview&tabs=tabid-vs2017), we can make some changes of the code in part 3.2 to create superposition for a qubit.</br>
+#### 3.3.1 Pauli-X Gate
+#### 3.3.2 Hadamard Gate
 
 ### 3.4 Create entanglement -- Multiple quantum computing
