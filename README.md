@@ -138,5 +138,6 @@ Init:One  0s=0    1s=1000
 Press any key to continue...
 ```
 The result shows that the observation is 100% the same with the initial value. If the initial state is `Zero`, we will observe `Zero` state all the time; while if the initial state is `One`, we will observe `One` all the time.
-### 3.3 Create superposition
+### 3.3 Create superposition -- Single quantum computing
 In this part we need to make some change of the code in part 3.2.
+### 3.4 Create entanglement -- Multiple quantum computing
