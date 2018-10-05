@@ -102,7 +102,7 @@ namespace Quantum.Bell
 
 ```
 Above we add two `operation` into the `Bell.qs`. `operation` is the basic execution unit in Q#, just like the `function` in C, C++ and Java. </br>
-**Code in `Driver.qs` is:**</br>
+**Code in `Driver.cs` is:**</br>
 ```C#
 using Microsoft.Quantum.Simulation.Core;
 using Microsoft.Quantum.Simulation.Simulators;
@@ -129,11 +129,14 @@ namespace Quantum.Bell
     }
 }
 ```
-Press `Debug`->`Start debugging`(F5) or `start without debugging`(Ctrl+F5), the code above will be built and executed, and the result is:</br>
+Press `Debug`->`Start debugging`(F5) or `start without debugging`(Ctrl+F5), the code above will be built and executed. </br>
+Sometimes there may be an error saying `the name XX does not exist in the current context unity`, which means that there is something wrong with the `References` of this project. The fastest solution is to download [this repository](https://github.com/yangjy0826/Microsoft-Q-) and make change in the `Bell.qs` and `Driver.cs` file.
+The correct result for this part is:</br>
 ```
 Init:Zero 0s=1000 1s=0
 Init:One  0s=0    1s=1000
 Press any key to continue...
 ```
+The result shows that the observation is 100% the same with the initial value. If the initial state is `Zero`, we will observe `Zero` state all the time; while if the initial state is `One`, we will observe `One` all the time.
 ### 3.3 Create superposition
-In this part we need to make some change of the code in [part 3.2](#3.2).
+In this part we need to make some change of the code in part 3.2.
