@@ -23,7 +23,7 @@ Open the Visual Studio 2017, and then click  `File`-> `New`->`Project`. Then cho
 ![Pic 3.1](https://github.com/yangjy0826/Microsoft-Q-/blob/master/img/new_project.PNG)</br>
 Then you can find that Visual Studio automatically generate two files, one is `Operation.qs`, which is a Q# file, the other is `Driver.cs`, which is a C# file. We should first rename the Q# file into `Bell.qs`. </br>
 Right now, the code in `Bell.qs` and `Driver.cs` is automatically generated when creating the new project, which is like this:</br>
-Code in `Bell.qs` is:</br>
+**Code in `Bell.qs` is:**</br>
 ```C#
 namespace Quantum.Bell 
 {
@@ -37,7 +37,7 @@ namespace Quantum.Bell
     }
 }
 ```
-Code in `Driver.cs` is:</br>
+**Code in `Driver.cs` is:**</br>
 ```C#
 using Microsoft.Quantum.Simulation.Core;
 using Microsoft.Quantum.Simulation.Simulators;
@@ -56,7 +56,7 @@ namespace Quantum.Bell
 
 ### 3.2 
 By following the step 1 to step 4 in the [tutorial document](https://docs.microsoft.com/en-us/quantum/quantum-writeaquantumprogram?view=qsharp-preview&tabs=tabid-vs2017), you are able to add content into the `Bell.qs` and `Driver.cs`, which is like this:</br>
-Code in `Bell.qs` is:</br>
+**Code in `Bell.qs` is:**</br>
 ```C#
 namespace Quantum.Bell
 {
@@ -102,7 +102,7 @@ namespace Quantum.Bell
 
 ```
 Above we add two `operation` into the `Bell.qs`. `operation` is the basic execution unit in Q#, just like the `function` in C, C++ and Java. </br>
-Code in `Driver.qs` is:</br>
+**Code in `Driver.qs` is:**</br>
 ```C#
 using Microsoft.Quantum.Simulation.Core;
 using Microsoft.Quantum.Simulation.Simulators;
