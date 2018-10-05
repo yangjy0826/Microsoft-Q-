@@ -15,3 +15,5 @@ After installing and opening CPU-Z, you can check by whether there is 'AUX' unde
 Firstly download Visual Stuio 2017 from [Microsoft's official webpage](https://visualstudio.microsoft.com/downloads/), and make sure that it is the right version (2017).</br>
 During the installation, at least the 'Universal Windows Platform development' and 'NET desktop development' shuld be chosen.</br>
 After the installation, it is also necessary to install another extension software [Microsoft Quantum Development Kit](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit). It can be finished by downloading the Q# VSIX file in the link, followed by double clicking.
+
+## First code using C# -- Creating a Bell state
