@@ -7,15 +7,11 @@ I will start by introducing how to setup the environment of Q#, and then explain
 ## Contents
 * [1 Before installation](#1-before-installation)
 * [2 Installing Visual Studio and setting the environment](#2-installing-visual-studio-and-setting-the-environment)
-* [3 Create a Bell state](#create-a-bell-state)
-    * 普通文本
-    * 单行文本
-    * 多行文本
-    * 文字高亮
-    * 换行
-    * 斜体
-    * 粗体
-    * 删除线
+* [3 Create a Bell state](#3-create-a-bell-state)
+    * 3.1 Create a new project
+    * 3.2 The first programme in Q#
+    * 3.3 Create superposition
+    * 3.4 Create entanglement
 
 ## 1 Before installation
 Q# can work on different operating systems including Windows, Linux and Mac, but make sure that it is 64-bit and has [.NET Core SDK 2.0](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) or higher version installed.</br>
@@ -152,7 +148,9 @@ Press any key to continue...
 ```
 The result shows that the observation is 100% the same with the initial value. If the initial state is `Zero`, we will observe `Zero` state all the time; while if the initial state is `One`, we will observe `One` all the time.
 
-### 3.3 Create superposition -- Single quantum computing
-In this part we need to make some change of the code in part [3.2](3.2-the-first-programme-in-Q#).
+### 3.3 Create superposition
+#### Single quantum computing
+In this part we need to make some change of the code in part [3.2](32-the-first-programme-in-Q).
 
-### 3.4 Create entanglement -- Multiple quantum computing
+### 3.4 Create entanglement
+#### Multiple quantum computing
