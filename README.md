@@ -91,12 +91,12 @@ namespace Quantum.Bell
         body
         {
           mutable numOnes = 0;
-      using (qubits = Qubit[1])
+      using (qubits = Qubit[1])  // Allocate one qubit
       {
           for (test in 1..count)
           {
               Set (initial, qubits[0]);
-              let res = M (qubits[0]);
+              let res = M (qubits[0]);  // M() is used to measure the qubit 
               // Count the number of ones we saw:
               if (res == One)
 {
@@ -112,7 +112,7 @@ namespace Quantum.Bell
 }
 
 ```
-Above we add two `operation` into the `Bell.qs`. `operation` is the basic execution unit in Q#, just like the `function` in C, C++ and Java. </br>
+Above we add two `operation` into the `Bell.qs`. `operation` is the basic execution unit in Q#, just like the `function` in C, C++ and Java. I write some comments in the code above, which may be helpful for the understand of code. </br>
 **Code in `Driver.cs` is:**</br>
 ```C#
 using Microsoft.Quantum.Simulation.Core;
@@ -182,3 +182,15 @@ Now if the initial state is `Zero`, we have 50% probability to observe `Zero` an
 </br>
 ![Pic 3.3](https://github.com/yangjy0826/Microsoft-Q-/blob/master/img/Hadamard.gif)
 ### 3.4 Create entanglement -- Multiple quantum computing
+In previous part 3.3, we only deal with one single qubit, but in this part we will try to involve two qubits and create entanglement between them.</br>
+We should first allocate two qubits instead of one:
+```diff
+- using (qubits = Qubit[1])  // Allocate one qubit
++ using (qubits = Qubit[2])  // Allocate two qubits
+```
+Then we need to add a new gate in the operation `BellTest`:
+```diff
+H(qubits[0]);
++ CNOT(qubits[0],qubits[1]);
+let res = M (qubits[0]);
+```
