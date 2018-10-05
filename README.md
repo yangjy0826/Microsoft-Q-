@@ -18,7 +18,7 @@ I will start by introducing how to setup the environment of Q#, and then explain
 ## 1 Before installation
 Q# can work on different operating systems including Windows, Linux and Mac, but make sure that it is 64-bit and has [.NET Core SDK 2.0](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) or higher version installed.</br>
 The simulator of Q# uses the instruction set of AUX, so if your CPU does not support AUX, the calculation speed will be not good enough. By using the sofware [CPU-Z](https://www.cpuid.com/softwares/cpu-z-android.html), you are able to figure out if your CPU sipport AUX.
-After installing and opening CPU-Z, you can check by whether there is  `AUX` under `Instructions`, which is shown in Pic 1 below.</br>
+After installing and opening CPU-Z, you can check by whether there is  `AUX` under `Instructions`, which is shown in the picture below.</br>
 </br>
 ![Pic 1](https://github.com/yangjy0826/Microsoft-Q-/blob/master/img/CPU.PNG)
 
@@ -30,7 +30,7 @@ After the installation of Visual Studio, it is also necessary to install another
 ## 3 Create a Bell state
 Bell state specifies the quantum states of two qubits that represent the simplest examples of quantum entanglement. It can be realized by using Hadamard gate and CNOT gate, which will be introduced later.
 ### 3.1 Create a new project
-Open the Visual Studio 2017, and then click  `File`-> `New`->`Project`. Then choose `Q# Application`, as is shown in the Pic 3.1 below.</br>
+Open the Visual Studio 2017, and then click  `File`-> `New`->`Project`. Then choose `Q# Application`, as is shown in the picture below.</br>
 </br>
 ![Pic 3.1](https://github.com/yangjy0826/Microsoft-Q-/blob/master/img/new_project.PNG)</br>
 Then you can find that Visual Studio automatically generate two files, one is `Operation.qs`, which is a Q# file, the other is `Driver.cs`, which is a C# file. We should first rename the Q# file into `Bell.qs`. </br>
@@ -165,7 +165,7 @@ Init:One  0s=1000 1s=0
 ```
 Now if the initial state is `Zero`, we will observe `One` state all the time; while if the initial state is `One`, we will observe `Zero` all the time.That is because X gate is similar to the logical NOT in classical computing. It can map `Zero` to `One`, and `One` to `Zero`.
 #### 3.3.2 Hadamard Gate
-If we delete the X Gate, and add a Hadamard Gate (H Gate) in the same position:
+If we delete the X Gate, and add a Hadamard Gate (H Gate) at the same position:
 ```diff
 - X(qubits[0]);
 + H(qubits[0]);
@@ -176,5 +176,7 @@ The result becomes:
 Init:Zero 0s=484  1s=516
 Init:One  0s=522  1s=478
 ```
-Now if the initial state is `Zero`, we have 50% probability to observe `Zero` and 50% probability to observe `One`, and vice versa. This is because the H Gate is used to create superposition, 
+Now if the initial state is `Zero`, we have 50% probability to observe `Zero` and 50% probability to observe `One`, and vice versa. This is because the H Gate is used to create superposition, for it can map the basis qubit states `Zero` and `One` into two superposition states:</br>
+</br>
+![Pic 3.2](https://github.com/yangjy0826/Microsoft-Q-/blob/master/img/Hadamard.jpg)
 ### 3.4 Create entanglement -- Multiple quantum computing
