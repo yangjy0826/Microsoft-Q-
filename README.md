@@ -217,7 +217,7 @@ namespace Quantum.Bell
     {
         body
         {
-			let current = M(q1);
+	    let current = M(q1);
 
             if (desired != current)
             {
