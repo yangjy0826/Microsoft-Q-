@@ -236,13 +236,13 @@ namespace Quantum.Bell
                 for (test in 1..count)
                 {
                     Set (initial, qubits[0]);
-					Set (Zero, qubits[1]);  
+		    Set (Zero, qubits[1]);  
 
-					H(qubits[0]);  // Hadamard gate (used to create super position)
-					CNOT(qubits[0],qubits[1]);
+		    H(qubits[0]);  // Hadamard gate (used to create super position)
+		    CNOT(qubits[0],qubits[1]);
                     let res = M (qubits[0]);
 
-					if (M (qubits[1]) == res) 
+		    if (M (qubits[1]) == res) 
                     {
                         set agree = agree + 1;
                     }
@@ -253,7 +253,7 @@ namespace Quantum.Bell
                     }
                 }
                 Set(Zero, qubits[0]);
-				Set(Zero, qubits[1]);
+		Set(Zero, qubits[1]);
             }
             return (count-numOnes, numOnes, agree);
         }
