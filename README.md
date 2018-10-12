@@ -289,6 +289,10 @@ namespace Quantum.Bell
     }
 }
 ```
+In this line of the .cs file, you can change the initial value:
+```
+Result[] initials = new Result[] { Result.Zero, Result.One }; // The initial value now is Zero and One.
+```
 The final result is:
 ```
 Init:Zero 0s=515  1s=485  agree=1000
