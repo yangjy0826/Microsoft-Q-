@@ -1,9 +1,8 @@
  # Quantum Computing Programming with Microsoft Q#
 *Last updated: 2018-10-09*
 ***
-Q# is the language developed by Microsoft, which can be used on many quantum algorithms. It should be driven by C#, and works on Visual Studio 2017. This project is based on the [Q# tutorial document](https://docs.microsoft.com/en-us/quantum/quantum-writeaquantumprogram?view=qsharp-preview&tabs=tabid-vs2017) given by Microsoft. I met some problems running the project, even though most of the work was only copy-paste. What is more, I would like to include some knowledge on quantum computing during the process. These are the main purposes of this md file.</br>
-I will start by introducing how to setup the environment of Q#, and then explain the process of writing a first code in Q#.
-
+Q# is the language developed by Microsoft, which can be used on many quantum algorithms. It should be driven by C#, and works on Visual Studio 2017. This project is based on the [Q# tutorial document](https://docs.microsoft.com/en-us/quantum/quantum-writeaquantumprogram?view=qsharp-preview&tabs=tabid-vs2017) given by Microsoft. </br>
+In the first and second part, I will introduce how to set up the environment of Q#, and in the third part, I will give some explanation to the code of realizing Bell State.
 ## Contents
 * [1 Before installation](#1-before-installation)
 * [2 Installing Visual Studio and setting the environment](#2-installing-visual-studio-and-setting-the-environment)
