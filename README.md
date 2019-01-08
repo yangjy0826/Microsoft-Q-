@@ -18,7 +18,7 @@ In the first and second part, I will introduce how to set up the environment of 
 ## 1 Before installation
 Q# can work on different operating systems including Windows, Linux and Mac, but make sure that it is 64-bit and has [.NET Core SDK 2.0](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) or higher version installed.</br>
 The simulator of Q# uses the instruction set of AUX, so if your CPU does not support AUX, the calculation speed will be not good enough. By using the sofware [CPU-Z](https://www.cpuid.com/softwares/cpu-z-android.html), you are able to figure out if your CPU sipport AUX.
-After installing and opening CPU-Z, you can check by whether there is  `AUX` under `Instructions`, which is shown in the picture below.</br>
+After installing and opening CPU-Z, you can check whether there is  `AUX` under `Instructions`, which is shown in the picture below.</br>
 </br>
 ![Pic 1](https://github.com/yangjy0826/Microsoft-Q-/blob/master/img/CPU.PNG)
 
